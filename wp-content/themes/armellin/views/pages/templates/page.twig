@@ -1,0 +1,11 @@
+{% extends 'base.twig' %}
+{% block tmp_slide %}
+   {% include 'partial/blocs/slider.twig' %}
+{% endblock %}
+{% block content %}
+<article class="container-fluid parallax2 url6" id="post-{{ post.id }} ">
+    <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a>
+    <img src=" {{ post.thumbnail.src }} " alt=" {{ post.thumbnail.alt }} " class="d-block w-100 w-md-50 fl p-20 mr20 shadow">
+    {{ post.get_field('contenu') }}
+</article>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+{% block tmp_slide %}
+   {% include 'partial/blocs/slider.twig' %}
+{% endblock %}
+{% block content %}
+<article class="container-fluid parallax2 url6" id="post-{{ post.id }} ">
+   {% include 'partial/sections/template-realisation/section1-presentation-template-realisation.twig'%} 
+   <div class="row pb50">
+      <a id="article-anch2" class="anch col-md-12 d-none d-md-block"></a>
+      {% include 'partial/sections/template-realisation/section2-description-bis.twig' %}
+      {% include 'partial/sections/template-realisation/section3-aside-technique.twig' %}
+   </div>
+   {% include 'partial/sections/template-realisation/section4-partenaire.twig' %}
+</article>
+{% endblock %}

@@ -1,0 +1,46 @@
+<section class="col-12  {% if post.get_field('image_process_1') %}col-md-6{% endif %}">
+    <h1 class="t10 p-10 font2">
+        <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="icone armellin.fr frondaison" class="w-10 mt40"> En savoir plus
+    </h1>
+    <div class="p-20 w-60 m-a">
+        {{ post.get_field('description-bis') }}
+    </div>
+    <div class="row">
+    {% if post.terms %}
+            {% for term in post.terms  %}
+                {% if term.taxonomy == 'type' %}
+                <div class="op5 p-20 t-a-center t5 col-12 col-md-6 black">
+                    {{ term.name }}
+                </div>
+                {% endif %} 
+            
+            {% endfor %}
+            {% for term in post.terms  %}
+                {% if term.taxonomy == 'material' %}
+                
+                <div class="op3 p-10 t4 col-6 col-md-4 black t-a-center">
+                    {{ term.name }}
+                </div> 
+                {% endif %}
+            {% endfor %}
+            {% for term in post.terms  %}
+                {% if term.taxonomy == 'designer' %}
+                {% if term.name == 'Mesmerize et Alexis Boucaut' %}
+                
+                <a href=" {{  site.url}}/le-blog/#article-anch6 " class="p-10 t4 col-6 col-md-4 white r20 d-block t-a-center bk1 op3">
+                    par {{ term.name }}®
+                </a> 
+                {% else %}
+                <div class="p-10 t4 col-6 col-md-4 white r20 t-a-center bk1 op3">
+                    par {{ term.name }}®
+                </div> 
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+     {% endif %}
+    </div>
+     <div class="col-3 col-md-2 col-lg-1 m-a pt50 pb50">
+        <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="w-100 d-block"> {{ post.get_field('titre_section_1') }}</h1>
+    </div>
+    
+</section>

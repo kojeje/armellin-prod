@@ -1,0 +1,304 @@
+{% extends 'base.twig' %}
+{% block content %}
+<article class="container-fluid parallax2 url6 row pb-10" id="post-{{ post.id }} ">
+     <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a>
+     <h1 class="col-12 col-md-6 p-50 mb20 bk6 t11 green font2 m-a t-a-center">
+               <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 p-0"> {{post.title}}
+     </h1>
+     <section class="row">
+          <div class="col-12 col-md-5 m-a">
+               <img src=" {{post.thumbnail.src}} " alt=" {{ post.thumbnail.alt }} " class="d-block w-100">
+          </div>
+          <p class="col-12  col-md-6 t6 pt-10 p-10">
+               {{ post.get_field('texte_1') }}
+               
+          </p>
+          {% include 'partial/anchors/anchor2.twig' %}
+          <a id="article-anch2" class="anch col-md-12 d-none d-md-block"></a>
+          <div class="row p-50">
+          {# {% if post.get_field('image_1') %}
+          
+          <div class="col-12 col-md-6 col-lg-3 m-a">
+               <img src=" {{ post.get_field('image_1').url }} " alt="{{ post.get_field('image_1').alt }}" class="w-100 d-block">
+               <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_1').alt }} </div>
+          </div>
+          {% endif %}
+          {% if post.get_field('image_2') %}
+          
+          <div class="col-12 col-md-6 col-lg-3 m-a">
+               <img src=" {{ post.get_field('image_2').url }} " alt="{{ post.get_field('image_2').alt }}" class="w-100 d-block">
+               <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_2').alt }} </div>
+          </div>
+          {% endif %}
+          {% if post.get_field('image_3') %}
+          
+          <div class="col-12 col-md-6 col-lg-3 m-a">
+               <img src=" {{ post.get_field('image_3').url }} " alt="{{ post.get_field('image_3').alt }}" class="w-100 d-block">
+               <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_3').alt }} </div>
+          </div>
+          {% endif %}
+          {% if post.get_field('image_4') %}
+          
+          <div class="col-12 col-md-6 col-lg-3 m-a">
+               <img src=" {{ post.get_field('image_4').url }} " alt="{{ post.get_field('image_4').alt }}" class="w-100 d-block">
+               <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_4').alt }} </div>
+          </div>
+          {% endif %}
+           {% if post.get_field('image_5') %}
+          
+          <div class="col-12 col-md-6 col-lg-3 m-a">
+               <img src=" {{ post.get_field('image_5').url }} " alt="{{ post.get_field('image_5').alt }}" class="w-100 d-block">
+               <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_5').alt }} </div>
+          </div>
+          {% endif %} #}
+          {% if post.get_field('image_1') %}
+        <div class="col-12 col-md-6 m-a d-none d-md-block">
+                <div id="ex1" class="row toile2 modal wmax-90 m-a mt-10 modal-prime">
+                    <div class="row">
+                        <a id="article-anch11" class="anch col-md-12 d-none mb-10 d-md-block"></a>
+                       {# <a id="article-anch12" class="anch col-md-12 d-none d-md-block"></a>  #}
+                        
+                        <div class="col-12 col-md-6">
+                            
+                            <img src="{{ post.get_field('image_1').url }}" alt="{{ post.get_field('image_1').alt }}" class="brd2 brd-c2 r10 p-10 m-a wmax-100 d-block hmax80vh ">
+                            <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_1').alt }} </div>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        <div class="bk8 r10 col-12 col-md-4 row p+30 brd2 brd-green r20">
+                            <a href="#" class="col-12 p-10 red t10 t-a-left toile2 toile" rel="modal:close"><i class="fal fa-times"></i></a>
+                            <h2 class="green d-none d-md-block font2 t-a-left">
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-inline-block  w-10"> {{ post.title }}
+                            </h2>
+                            <p class="white d-none d-md-block">
+                                {{ post.get_field('presentation') }}
+                            </p>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        
+                    </div>
+                     <div class="h10 mt-10 white row">
+                        
+                        <hr class="brd-green col-md-3 d-none d-md-block"> 
+                        <div class="col-md-4 d-none d-md-block">
+                            
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 d-block"> - tous droits réservés: armellin.fr ®
+                        </div>
+                        <hr class="brd-green col-md-3 d-none d-md-block">
+                            
+                    </div>
+                </div>
+                <!-- Link to open the modal -->
+                <a href="#ex1" class="toile2 m-a" rel="modal:open">
+                    <img src="{{ post.get_field('image_1').url }}" alt="{{ post.get_field('image_1').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                </a>
+        </div>
+         <div class="col-12 col-md-6 m-a d-block d-md-none">
+                
+                <!-- Link to open the modal -->
+                <div class="toile2 m-a">
+                    <img src="{{ post.get_field('image_1').url }}" alt="{{ post.get_field('image_1').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                </div>
+        </div>
+        {% endif %}
+        {% if post.get_field('image_2') %}
+       <div class="col-12 col-md-6 m-a d-none d-md-block">
+                <div id="ex2" class="row toile2 modal wmax-90 m-a mt-10 modal-prime">
+                    <div class="row">
+                        <a id="article-anch11" class="anch col-md-12 d-none mb-10 d-md-block"></a>
+                       {# <a id="article-anch12" class="anch col-md-12 d-none d-md-block"></a>  #}
+                        
+                        <div class="col-12 col-md-6">
+                            
+                            <img src="{{ post.get_field('image_2').url }}" alt="{{ post.get_field('image_2').alt }}" class="brd2 brd-c2 r10 p-10 m-a wmax-100 d-block hmax80vh ">
+                            <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_2').alt }} </div>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        <div class="bk8 r10 col-12 col-md-4 row p+30 brd2 brd-green r20">
+                            <a href="#" class="col-12 p-10 red t10 t-a-left toile2 toile" rel="modal:close"><i class="fal fa-times"></i></a>
+                            <h2 class="green d-none d-md-block font2 t-a-left">
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-inline-block  w-10"> {{ post.title }}
+                            </h2>
+                            <p class="white d-none d-md-block">
+                                {{ post.get_field('presentation') }}
+                            </p>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        
+                    </div>
+                     <div class="h10 mt-10 white row">
+                        
+                        <hr class="brd-green col-md-3 d-none d-md-block"> 
+                        <div class="col-md-4 d-none d-md-block">
+                            
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 d-block"> - tous droits réservés: armellin.fr ®
+                        </div>
+                        <hr class="brd-green col-md-3 d-none d-md-block">
+                            
+                    </div>
+                </div>
+                <!-- Link to open the modal -->
+                <a href="#ex2" class="toile2 m-a" rel="modal:open">
+                    <img src="{{ post.get_field('image_2').url }}" alt="{{ post.get_field('image_2').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                </a>
+        </div>
+         <div class="col-12 col-md-6 m-a d-block d-md-none">
+                
+                <!-- Link to open the modal -->
+                <div class="toile2 m-a">
+                    <img src="{{ post.get_field('image_2').url }}" alt="{{ post.get_field('image_2').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                </div>
+        </div>
+        {% endif %}
+        {% if post.get_field('image_3') %}
+        <div class="col-12 col-md-6 m-a d-none d-md-block">
+                <div id="ex3" class="row toile2 modal wmax-90 m-a mt-10 modal-prime">
+                    <div class="row">
+                        <a id="article-anch11" class="anch col-md-12 d-none mb-10 d-md-block"></a>
+                       {# <a id="article-anch12" class="anch col-md-12 d-none d-md-block"></a>  #}
+                        
+                        <div class="col-12 col-md-6">
+                            
+                            <img src="{{ post.get_field('image_3').url }}" alt="{{ post.get_field('image_3').alt }}" class="brd2 brd-c2 r10 p-10 m-a wmax-100 d-block hmax80vh ">
+                            <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_3').alt }} </div>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        <div class="bk8 r10 col-12 col-md-4 row p+30 brd2 brd-green r20">
+                            <a href="#" class="col-12 p-10 red t10 t-a-left toile2 toile" rel="modal:close"><i class="fal fa-times"></i></a>
+                            <h2 class="green d-none d-md-block font2 t-a-left">
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-inline-block  w-10"> {{ post.title }}
+                            </h2>
+                            <p class="white d-none d-md-block">
+                                {{ post.get_field('presentation') }}
+                            </p>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        
+                    </div>
+                     <div class="h10 mt-10 white row">
+                        
+                        <hr class="brd-green col-md-3 d-none d-md-block"> 
+                        <div class="col-md-4 d-none d-md-block">
+                            
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 d-block"> - tous droits réservés: armellin.fr ®
+                        </div>
+                        <hr class="brd-green col-md-3 d-none d-md-block">
+                            
+                    </div>
+                </div>
+                <!-- Link to open the modal -->
+                <a href="#ex3" class="toile2 m-a" rel="modal:open">
+                    <img src="{{ post.get_field('image_3').url }}" alt="{{ post.get_field('image_3').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                </a>
+        </div>
+         <div class="col-12 col-md-6 m-a d-block d-md-none">
+                
+                <!-- Link to open the modal -->
+                <div class="toile2 m-a">
+                    <img src="{{ post.get_field('image_3').url }}" alt="{{ post.get_field('image_3').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                </div>
+        </div>
+        {% endif %}
+        {% if post.get_field('image_4') %}
+        <div class="col-12 col-md-6 m-a d-none d-md-block">
+                <div id="ex4" class="row toile2 modal wmax-90 m-a mt-10 modal-prime">
+                    <div class="row">
+                        <a id="article-anch11" class="anch col-md-12 d-none mb-10 d-md-block"></a>
+                       {# <a id="article-anch12" class="anch col-md-12 d-none d-md-block"></a>  #}
+                        
+                        <div class="col-12 col-md-6">
+                            
+                            <img src="{{ post.get_field('image_4').url }}" alt="{{ post.get_field('image_4').alt }}" class="brd2 brd-c2 r10 p-10 m-a wmax-100 d-block hmax80vh ">
+                            <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_4').alt }} </div>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        <div class="bk8 r10 col-12 col-md-4 row p+30 brd2 brd-green r20">
+                            <a href="#" class="col-12 p-10 red t10 t-a-left toile2 toile" rel="modal:close"><i class="fal fa-times"></i></a>
+                            <h2 class="green d-none d-md-block font2 t-a-left">
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-inline-block  w-10"> {{ post.title }}
+                            </h2>
+                            <p class="white d-none d-md-block">
+                                {{ post.get_field('presentation') }}
+                            </p>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        
+                    </div>
+                     <div class="h10 mt-10 white row">
+                        
+                        <hr class="brd-green col-md-3 d-none d-md-block"> 
+                        <div class="col-md-4 d-none d-md-block">
+                            
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 d-block"> - tous droits réservés: armellin.fr ®
+                        </div>
+                        <hr class="brd-green col-md-3 d-none d-md-block">
+                            
+                    </div>
+                </div>
+                <!-- Link to open the modal -->
+                <a href="#ex4" class="toile2 m-a" rel="modal:open">
+                    <img src="{{ post.get_field('image_4').url }}" alt="{{ post.get_field('image_4').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                </a>
+        </div>
+         <div class="col-12 col-md-6 m-a d-block d-md-none">
+                
+                <!-- Link to open the modal -->
+                <div class="toile2 toile m-a">
+                    <img src="{{ post.get_field('image_4').url }}" alt="{{ post.get_field('image_4').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                    <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_4').alt }} </div>
+                </div>
+        </div>
+        {% endif %}
+        {% if post.get_field('image_5') %}
+        <div class="col-12 col-md-6 m-a d-none d-md-block">
+                <div id="ex5" class="row toile2 modal wmax-90 m-a mt-10 modal-prime">
+                    <div class="row">
+                        <a id="article-anch11" class="anch col-md-12 d-none mb-10 d-md-block"></a>
+                       {# <a id="article-anch12" class="anch col-md-12 d-none d-md-block"></a>  #}
+                        
+                        <div class="col-12 col-md-6">
+                            
+                            <img src="{{ post.get_field('image_5').url }}" alt="{{ post.get_field('image_5').alt }}" class="brd2 brd-c2 r10 p-10 m-a wmax-100 d-block hmax80vh ">
+                            <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_5').alt }} </div>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        <div class="bk8 r10 col-12 col-md-4 row p+30 brd2 brd-green r20">
+                            <a href="#" class="col-12 p-10 red t10 t-a-left toile2 toile" rel="modal:close"><i class="fal fa-times"></i></a>
+                            <h2 class="green d-none d-md-block font2 t-a-left">
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-inline-block  w-10"> {{ post.title }}
+                            </h2>
+                            <p class="white d-none d-md-block">
+                                {{ post.get_field('presentation') }}
+                            </p>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        
+                    </div>
+                     <div class="h10 mt-10 white row">
+                        
+                        <hr class="brd-green col-md-3 d-none d-md-block"> 
+                        <div class="col-md-4 d-none d-md-block">
+                            
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 d-block"> - tous droits réservés: armellin.fr ®
+                        </div>
+                        <hr class="brd-green col-md-3 d-none d-md-block">
+                            
+                    </div>
+                </div>
+                <!-- Link to open the modal -->
+                <a href="#ex5" class="toile2 m-a" rel="modal:open">
+                    <img src="{{ post.get_field('image_5').url }}" alt="{{ post.get_field('image_5').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                </a>
+        </div>
+         <div class="col-12 col-md-6 m-a d-block d-md-none">
+                
+                <!-- Link to open the modal -->
+                <div class="toile2 m-a">
+                    <img src="{{ post.get_field('image_5').url }}" alt="{{ post.get_field('image_process_5').alt }}" class="hmax50vh d-block p-10 m-a wmax-100">
+                     <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt40 p-0"> {{ post.get_field('image_5').alt }} </div>
+                </div>
+        </div>
+        {% endif %}
+          </div>
+     </section>
+</article>
+{% endblock %}

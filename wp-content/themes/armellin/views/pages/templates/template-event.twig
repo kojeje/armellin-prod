@@ -1,0 +1,32 @@
+{% extends 'base.twig' %}
+{% block content %}
+<article class="container-fluid parallax2 url6" id="post-{{ post.id }} ">
+    <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a>
+    <h1 class="col-12 col-md-8 col-lg-6 p-50 mb20 bk6 green font2 m-a t-a-center">
+        <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 p-0"> {{ post.title }}
+    </h1>
+    <div class="row">
+        <div class="col-12 col-md-6 p-10 row">
+            <h2 class="t-a-center p-10 bk7 white col-12 mt20 mb20"> {% if post.get_field('end') %}du {% else %} le {% endif %}{{ post.get_field('begin')|date('j F Y') }} {% if post.get_field('end') %}au {{ post.get_field('end')|date('j F Y') }} {% endif %} </h2>
+            <p class="p-10 t-a-center col-12">
+                
+                   <span class="t6">{{ post.get_field('lieu').title }}</span> - {{ post.get_field(' cp ') }} {{ post.get_field('lieu').commune }}
+              
+            </p>
+            <div class="col-12 col-lg-6 m-a">
+                <img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" class="w-100 shadow m-a d-md-block">
+            </div>
+            <div class="col-12 col-md-6 d-none d-md-block m-a p-10">
+                <img src="{{ post.get_field('qr').url }}" alt="{{ post.get_field('qr').alt }}" class="w-100 m-a">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 p-10">
+            
+            <div class="p-10 m-a">
+                {{ post.get_field('lieu').map }}
+            </div>
+        </div>
+        
+    </div>
+</article>
+{% endblock %}

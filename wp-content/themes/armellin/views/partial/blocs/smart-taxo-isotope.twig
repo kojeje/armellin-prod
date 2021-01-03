@@ -1,0 +1,13 @@
+{# dropdownn sm #}
+<div class="d-block d-md-none col-12 m-a p-a10 bk8 btn-group dropleft ">
+    <button type="button" id="button" class="p-10 m-a bk6 green btn btn-secondary dropdown-toggle t-a-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="white fad fa-hand-pointer"></i> {{'catégories'|upper}}
+    </button>
+    <div class="row dropdown-menu dropdown-menu2 dropdown-menu3 header-menu filter-button-group button-group js-radio-button-group">
+        <!-- Dropdown menu links -->
+                <button type="button" data-filter="*" autofocus="autofocus" id="all" class="col-12 op8 filter-button bk5 white t4 m-a t-a-center p-10 mb10 mr10">Tout</button>
+                {% for taxo in taxos  %}
+                    <button   data-filter=".{{ taxo.id }}" class=" {% for act in acts %} {% for term in act.terms  %} {% if taxo.name == term.name %} d-md-inline-block d-block {% else %} d-none {% endif %} {% endfor %} {% endfor %}col-12 filter-button bk5 white op8">{{ taxo.name }}</button>
+                {% endfor %}          
+    </div>
+</div>

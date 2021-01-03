@@ -1,0 +1,11 @@
+<div class="d-none d-md-flex container-fluid  m-a filter-button-group button-group js-radio-button-group row">
+  <button data-filter="*" autofocus="autofocus" id="all" class="m-a pb5 pt5 pl10 pr10 op8 filter-button bk6 white t4 m-a t-a-center mb10 ">Tout</button>
+  
+    
+    
+ 
+  {% for taxo in taxos  %}
+    <button   data-filter=".{{ taxo.id }}" class="m-a pb5 pt5 pl10 pr10{% for act in acts %} {% for term in act.terms  %} {% if taxo.name == term.name %} d-inline-block {% else %} d-none {% endif %} {% endfor %} {% endfor %} filter-button bk6 white op8  mb10">{{ taxo.name }}</button>
+  {% endfor %}
+  
+</div>

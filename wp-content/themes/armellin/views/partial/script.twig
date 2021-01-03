@@ -1,0 +1,54 @@
+{# <script src="{{ theme.link }}/assets/js/script.js"></script>
+<script src="{{ theme.link }}/assets/js/filterable.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{ theme.link }}/assets/js/filterable.js" type="text/javascript" charset="utf-8"></script> #}
+{# <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> #}
+{# <script src="https://code.jquery.com/jquery-1.12.4.js"></script> #}
+{# <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> #}
+{# <script src="{{ theme.link }}/assets/js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script> #}
+<script async defer crossorigin = "anonyme" src = " https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v7.0&appId= 263766757577623 & autoLogAppEvents = 1 " nonce = " bdWVGGSI " > </script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- Production version -->
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+{# <!-- Development version --> #}
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script>
+    
+    {# function attribuerFocus()
+    {
+    document.getElementById(all).focus();
+    } #}
+
+    var taxo_ids = {{ taxos|json_encode() }};
+   
+        // init Isotope
+var $grid = $('.grid').isotope({
+  // options
+});
+// filter items on button click
+$('.filter-button-group').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+  alert(filterVue);
+});
+$('.filter-button-group').load(function() {
+  var filterValue = "*";
+  $grid.isotope({ filter: filterValue });
+  alert(filterVue);
+});
+
+
+</script>
+<!-- or --> 
+{# <script>
+    // filter .metal AND .transition items
+$grid.isotope({ filter: '.metal.transition' });
+
+// show all items
+$grid.isotope({ filter: '*' });
+</script> #}
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
