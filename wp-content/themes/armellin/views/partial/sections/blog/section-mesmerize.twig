@@ -1,0 +1,27 @@
+<section>
+    <div class="row mb-10">
+    
+    {% for item in articles %}
+               {% for term in item.terms %}
+                   {% if term.name ==  'mesmerize' and item.id == 547 %}
+                        <a href=" https://www.mesmerize.at/ " target="_blank" class="bk6 green aqua-hover col-12 col-md-10 d-block m-a mb20">
+                            
+                            {# <h2 class=" bk6 green t-a-center">
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-50 w-md-30  p-20  mt40">
+                                <br>
+                                 {{ item.title }}
+                            </h2> #}
+                            <div>
+                                <img src=" {{ item.thumbnail.src }} " alt="{{ item.thumbnail.alt }}"  class="w-100 p-30 d-block">
+                            </div>
+                            <p class="d-none d-lg-block bk8">
+                                {{ item.get_field('texte_1') }} 
+                           </p>
+                        </a>
+                   {% endif %}
+                   
+               {% endfor %}
+          {% endfor %}
+    </div>
+     
+</section>

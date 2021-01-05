@@ -1,0 +1,24 @@
+{# armellin #}
+<!doctype html>
+<html xmlns:og="http://ogp.me/ns#" lang="fr">
+    <head>
+        {# {{ function('wp_head')}} #}
+        {% include "partial/head.twig" %}
+    </head>
+    <body onload="attribuerFocus()" class="url6 parallax2 body font1 w-100 t-5 t-md-5 t-lg-5" id="myDIV">
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v7.0&appId=263766757577623&autoLogAppEvents=1" nonce="gSZZsOl3"></script> 
+        {% block tmp_slide %}{% endblock %}
+        {% include "partial/header2.twig" %}
+        <a id="article-rea" class="anch col-md-12 d-none d-md-block"></a>
+        {% block content %}{% endblock %}
+        {% include 'partial/blocs/certifications.twig' %}
+        {% include "partial/totop.twig" %}
+        {% include "partial/footer.twig" %}
+        {% include "partial/script.twig" %}
+        {% if user %}   
+            {{ wp_footer }}
+        {% endif %}
+    </body>
+    <div id = "fb-root" > </div>
+</html>

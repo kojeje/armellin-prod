@@ -1,0 +1,54 @@
+<section>
+    <h2 class=" p-10 font2 w-100 t-a-center mb20">
+            <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="w-30 w-md-10 p-20"> {{ post.get_field('titre_1') }}
+    </h2>
+    <div class="row mb-10">
+    <h3 class="col-12 t-a-center"><span class="white bk7 p-10 d-block w-80 w-md-30 mb30 "> {{ post.get_field('sub') }} </span></h3>
+    {% for item in articles %}
+               {% for term in item.terms %}
+                   {% if term.name ==  'La ressource' %}
+                        <a href=" {{ item.link }} " class="toile col-12 col-md-6 col-lg-4 d-block m-a mb20">
+                            <div>
+                                <img src=" {{ item.thumbnail.src }} " alt=" {{ item.thumbnail.alt }} " class="toile w-100 d-block">
+                            </div>
+                            
+                            <p class="caption3 bk6 green t-a-center">
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-50 w-md-30  p-20  mt40">
+                                <br>
+                                 {{ item.title }}
+                            </p>
+                            <p class="caption2 d-none d-lg-block bk8 white">
+                                {{ item.post_excerpt }} <span class="green p-10"> (cliquer pour lire l'article)</span>
+                           </p>
+                        </a>
+                   {% endif %}
+                   
+               {% endfor %}
+          {% endfor %}
+    </div>
+     <div class="row mb-10">
+    <h2 class="col-12 t-a-center t7"><span class="white bk7 p-10 d-block w-80 w-md-30 mb30 "> {{ post.get_field('sub_2') }} </span></h2>
+    {% for item in articles %}
+               {% for term in item.terms %}
+                   {% if term.name ==  'La transformation' %}
+                        <a href=" {{ item.link }} " class="toile col-12 col-md-6 col-lg-4 d-block m-a mb20">
+                            <div>
+                                <img src=" {{ item.thumbnail.src }} " alt=" {{ item.thumbnail.alt }} " class="toile w-100 d-block">
+                            </div>
+                            
+                            <p class="caption3 bk6 green t-a-center">
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-50 w-md-30  p-20  mt40">
+                                <br>
+                                 {{ item.title }}
+                            </p>
+                            <p class="caption2 bk8 d-none d-lg-block white">
+                                {{ item.post_excerpt }} <span class="green p-10"> (cliquer pour lire l'article)</span>
+                           </p>
+                        </a>
+                   {% endif %}
+                   
+               {% endfor %}
+          {% endfor %}
+    </div>
+    
+</section>

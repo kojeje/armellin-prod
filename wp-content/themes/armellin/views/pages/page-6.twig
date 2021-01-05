@@ -1,0 +1,16 @@
+{% extends 'base.twig' %}
+{% block tmp_slide %}
+   {% include 'partial/blocs/slider.twig' %}
+{% endblock %}
+{% block content %}
+<article class="container-fluid" id=" {{ post.id }} ">
+
+   {# {% include 'partial/sections/section-dump.twig' %} #}
+   {% include 'partial/sections/accueil/section1-presentation.twig' %}
+   {% include 'partial/blocs/arbre-intersection.twig' %} 
+   {% include 'partial/sections/accueil/section2-concept.twig' %}
+   {% include 'partial/blocs/arbre-intersection.twig' %} 
+   {% include 'partial/sections/accueil/section3-realisation.twig' %}
+   {% include 'partial/blocs/arbre-intersection.twig' %}
+</article>
+{% endblock %}

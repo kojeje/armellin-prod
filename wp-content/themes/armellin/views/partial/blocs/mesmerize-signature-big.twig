@@ -1,0 +1,21 @@
+{% if post.get_field('mesmerize') == true %}
+    
+{% endif %}
+{% for term in post.terms if term.taxonomy == 'designer' %}
+    {% if term.name == 'Mesmerize et Alexis Boucaut' %}
+    <a href=" {{ site.url }}/le-blog/#article-anch6 " class="w-30 op8 caption6 shadow">
+        <img src="{{ theme.link }}/assets/img/mesmerize-signature.png" alt="" class="d-block w-100">
+    </a>
+    {% elseif term.name == 'David Dalidec'%}
+    <div class="w-30 op8 caption6 shadow">
+        <img src="{{ theme.link }}/assets/img/Dalidec-signature.png" alt="" class="d-block w-100">
+    </div>
+    {% endif %}
+    
+{% endfor %}
+
+   
+
+
+
+

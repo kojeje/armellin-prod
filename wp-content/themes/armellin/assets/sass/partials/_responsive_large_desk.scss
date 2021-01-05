@@ -1,0 +1,28 @@
+// large desktop
+@media screen and (min-width:1500px){
+
+h1{
+    font-size : $t11;
+}
+h2{
+    font-size: $t10;
+}
+h3{
+    font-size: $t9;
+}
+h4{
+    font-size: $t8;
+}
+h5{
+    font-size: $t7;
+}
+h6{
+    font-size: $t6;
+}
+p, div, legend, input, select, ul, li{
+    font-size: $t5;
+}
+       .fa-angle-left, .fa-angle-right{
+        font-size: 100px !important;
+    }
+}

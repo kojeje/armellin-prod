@@ -1,0 +1,43 @@
+{# dropdownn sm #}
+<div class="d-block d-md-none col-1  btn-group dropleft">
+    <button type="button" id="button" class="btn btn-secondary dropdown-toggle t9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <p>
+            <i class="t-a-center t5 black fas fa-bars"></i>
+        </p>
+    </button>
+    <div class="dropdown-menu dropdown-menu2 header-menu  bk2">
+        <!-- Dropdown menu links -->
+        <ul class="ul2 t-a-center justify-content-center t4 t-md-4 t-lg-4 w-100 m-a pt-10">
+            <li class="wmax-30 m-a item-menu link link2 t-a-center  mb30">
+                <img src=" {{theme.link}}/assets/img/etude-frondaison.png" alt="" class="w-70 m-a img">
+            </li>
+            {% for item in menu.items %}
+         
+            <li class=" m-a link d-block t-a-center item-menu link t-a-center ">
+                <a class="color3" href="{% include 'partial/special/condition-link.twig' %}">
+                {# si lien  #}
+                    {% if item.title == 'Accueil' or item.title == 'accueil' %}
+                        <i class="t8 t-md-8 t-lg-8 far fa-home"></i> 
+                    {% elseif item.title == 'Contact' or item.title == 'contact' or item.title == 'Nous contacter' or item.title == 'nous contacter' %}
+                        <i class="t8 t-md-8 t-lg-8 fal fa-envelope"></i>
+                    {% endif %}
+                    
+                    {{ item.title }}
+                    
+                </a>
+                 {% if item.children %}
+                    <ul class="nav-drop">
+                        {% for child in item.children %}
+                            <li class="nav-drop-item">
+                                <a href="{{ child.link }}">{{ child.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+           
+            
+        </ul>
+    </div>
+</div>

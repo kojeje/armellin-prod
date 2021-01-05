@@ -1,0 +1,96 @@
+<section class="shadow parallax2 url5 white row p-0 mb-10">
+    <a id="article-contact" class="anch col-md-12 d-none d-md-block"></a>
+    
+    <div class="row container m-a bk6 p-20 r20">
+    
+    
+        <div class="col-12 col-md-6 mt-10">
+            <div class="p-10 mb20 t-5 t-md-8 font2 m-a t-a-center bk5 green">
+                <h1 class="green font2 t-a-center"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 mb10">Contact</h1>
+                <a href="#article-anch6" class="button button-h t-a-center d-lg-block d-none color3 anch m-a col-12">
+
+                    <span class="white"><i class="fas fa-chevron-down"></i></span>
+
+                </a>
+            </div>
+            <div class="shadow mt30">
+                {% for contact in contacts %}
+                    {{ contact.get_field('lieu_relatif_au_contact').map }}
+                    
+                {% endfor %}
+            </div>
+        </div>
+          {% for lieu in lieux  %}
+           
+        {% for contact in contacts %}
+        {# <pre class="white">
+            {{ dump(contact.get_field('lieu_relatif_au_contact')) }}
+        </pre> #}
+          
+            
+            {% if lieu.id == contact.get_field('lieu_relatif_au_contact').id %}
+                
+            
+                 <div class="t-a-center  font2 col-12 col-md-6 m-a white p-20 contact-bloc">
+                    <div class="w-20 m-a">
+                        <img src=" {{ lieu.thumbnail.src }} " alt=" {{ lieu.thumbnail.alt }} " class="w-100 m-a d-block">
+                    </div>
+                    <p class="green">
+                        {{ lieu.title}}
+                    </p> 
+                    <p class="white">
+                        {{ lieu.get_field('adresse_ligne_1') }}
+                    </p>
+                    <p class="white">
+                        {% if lieu.get_field('adresse_ligne_2') %}, {{ lieu.get_field('adresse_ligne_2') }} {% endif %}
+                    </p>
+                    <p class="white">
+                        {{ lieu.get_field('cp') }} - <span class="white">{{ lieu.get_field('commune') }}</span>
+                    </p>
+                    <p class="white">
+                        <i class="fal fa-phone t2"></i>  {{ lieu.get_field('tel') }}
+                    </p>
+                   <div class=" d-none d-lg-flex row mt20  m-a p-30 brd1 brd-c2 r10"> 
+                            <div class="col-12 col-md-6">
+                                <img src=" {{ lieu.get_field('qrcode').url }} " alt="{{ lieu.get_field('qrcode').alt}}" class="w-80 m-a d-block">
+                            </div>
+                            <p class="col-12 col-md-6 mt20"> <span class="green">{{ 'scannez'|upper }}</span> <br> pour vous y rendre !</p>
+                        </div>
+                    </div>
+             {% endif %}
+            {% endfor %}
+       
+
+        {% endfor %}
+        
+    <div class="col-6 m-a">
+        <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 mt20 p-0 d-block m-a">
+    </div>
+    </div>
+    <a id="article-anch6" class="anch col-12 d-none d-md-block"></a>
+
+   <div class="row bk6 m-a mb-10">
+    <div class="col-12 col-md-6 p-30">
+        <h2 class="green bk6 t-a-center p-20 shadow">
+            <i class="white fal fa-envelope"></i> Envoyer un message
+        </h2>  
+        <p>{{ '[caldera_form id="CF5eae0a78ba590"]'|shortcodes }}</p>  
+    </div>
+    <div class="col-12 col-md-6 p-30">
+        <h2 class="green bk6 t-a-center p-20 shadow m-a w-30">
+            <i class="white fal fa-wine-bottle"></i> newsletter
+        </h2>  
+        <p>{{ '[mailpoet_form id="2"]'|shortcodes }}</p>
+        
+        <div class="w-100 mt-20">
+            <img src=" {{ theme.link }}/assets/img/frondaison-white.png " alt="logo" class="m-a w-10 d-block">
+        </div>
+    </div>
+    
+   
+    </div>
+        
+    </div>
+        
+    
+</section>

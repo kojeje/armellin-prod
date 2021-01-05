@@ -1,0 +1,35 @@
+{# dropdownn md #}
+<div class="d-none d-md-block col-md-10 mt20">
+    
+    <div class="menu header-menu">
+        <!-- Dropdown menu links -->
+        <ul class="t-a-center d-flex justify-content-center t4 t-md-4 t-lg-4 w-100 m-a">
+            {% for item in menu.items %}
+         
+            <li class="wmax-12 m-a link d-block t-a-center item-menu link t-a-center ">
+                <a class="color3" href="{% include 'partial/special/condition-link.twig' %}">
+                {# si lien  #}
+                    {% if item.title == 'Accueil' or item.title == 'accueil' %}
+                        <i class="t8 t-md-8 t-lg-8 far fa-home"></i> 
+                    {% elseif item.title == 'Contact' or item.title == 'contact' or item.title == 'Nous contacter' or item.title == 'nous contacter' %}
+                        <i class="t8 t-md-8 t-lg-8 fal fa-envelope"></i>
+                    {% endif %}
+                    
+                    {{ item.title }}
+                    
+                </a>
+                 {% if item.children %}
+                    <ul class="nav-drop">
+                        {% for child in item.children %}
+                            <li class="nav-drop-item">
+                                <a href="{{ child.link }}">{{ child.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+            
+        </ul>
+    </div>
+</div>

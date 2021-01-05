@@ -1,0 +1,30 @@
+{% extends 'base.twig' %}
+{% block content %}
+     <article class="container-fluid parallax2 url6 pb-10" id="post-{{ post.id }} ">
+
+          <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a>
+          <h1 class="col-10 col-md-6 m-a p-50 mb20 bk6 green font2 m-a t-a-center">
+               <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-20 p-0"> {{ post.title }}
+          </h1>
+          
+          {% include 'partial/sections/blog/section1-blog.twig' %}
+          {% include 'partial/anchors/anchor2.twig' %}
+          {% include 'partial/blocs/arbre-intersection.twig' %}
+          <a id="article-anch2" class="anch col-md-12 d-none d-md-block"></a>
+          {% include 'partial/sections/blog/section2-blog.twig' %}
+          {% include 'partial/anchors/anchor3.twig' %}
+          {% include 'partial/blocs/arbre-intersection.twig' %}
+          <a id="article-anch3" class="anch col-md-12 d-none d-md-block"></a>
+          {% include 'partial/sections/blog/section3-blog.twig' %}
+          {% include 'partial/anchors/anchor4.twig' %}
+          {% include 'partial/blocs/arbre-intersection.twig' %}
+          <a id="article-anch4" class="anch col-md-12 d-none d-md-block"></a>
+          {% include 'partial/sections/blog/section4-blog.twig' %}
+          {% include 'partial/anchors/anchor5.twig' %}
+          {% include 'partial/blocs/arbre-intersection.twig' %}
+          <a id="article-anch5" class="anch col-md-12 d-none d-md-block"></a>
+          {% include 'partial/sections/blog/section5-blog.twig' %}
+          <a id="article-anch6" class="anch col-md-12 d-none d-md-block"></a>
+          {% include 'partial/sections/blog/section-mesmerize.twig' %} 
+     </article>
+{% endblock %}

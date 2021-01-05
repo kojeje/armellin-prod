@@ -1,0 +1,17 @@
+<section class="shadow parallax2 url2 row">
+    <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a>
+    <div class="offset-lg-4 d-lg-block d-none"></div>
+    <div class="col-12 col-lg-8 container">
+        <h1 class="font2">
+            <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="mb20 w-5"> {{ post.get_field('titre_section_1') }}</h1>
+        <div class="font3 color4 p-30">
+            {{ post.get_field('texte_section_1') }}
+        </div>
+      >
+        
+        <div class="col-1 m-a">
+            <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="d-block w-70 m-a mb30">
+        </div>
+        {% include 'partial/anchors/anchor2.twig' %}
+    </div>
+</section>

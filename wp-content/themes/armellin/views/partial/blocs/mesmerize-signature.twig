@@ -1,0 +1,16 @@
+{% for term in post.terms if term.taxonomy == 'designer' %}
+    {% if term.name == 'Mesmerize et Alexis Boucaut' %}
+    <a href=" {{ site.url }}/le-blog/#article-anch6 " class="w-10 op8 caption7 d-block shadow">
+        <img src="{{ theme.link }}/assets/img/mesmerize-signature.png" alt="" class="d-block w-100">
+    </a>
+    {% elseif term.name == 'David Dalidec'%}
+    <div class="w-10 op8 caption7 shadow">
+        <img src="{{ theme.link }}/assets/img/Dalidec-signature.png" alt="" class="d-block w-100">
+    </div>
+    {% endif %}
+    
+{% endfor %}
+
+   
+
+

@@ -1,0 +1,54 @@
+/* @override http://newmediacampaigns.com/css/compiled.css */
+
+/* Eric Meyer Reset */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body { font: 12px/20px arial, verdana, sans-serif; color: #58534c; background: #FFF; }
+
+:focus { outline: 0; }
+
+
+a{ color: #000; }
+a:link, a:visited{ text-decoration: underline; }
+a:hover, a:active{ text-decoration: none; }
+a img{ border: none; }
+
+
+
+
+/* Content */
+
+#content{ padding: 20px 0; }
+
+/* Content - Portfolio Listing */
+
+ul#portfolio-filter{  padding: 0; padding-left: 70px; line-height: 32px; }
+ul#portfolio-filter li{ display: inline; }
+ul#portfolio-filter a {
+	 
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+ul#portfolio-list{ margin: 36px 0 0 0; padding: 0; list-style: none; }
+ul#portfolio-list li{ margin-top: 20px; }
+ul#portfolio-list li a{ display: block; overflow: hidden;}
+ul#portfolio-list li p{ font-size: 11px; color: white; margin: 5px 0; }
+

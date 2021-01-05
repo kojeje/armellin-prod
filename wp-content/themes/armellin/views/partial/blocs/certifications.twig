@@ -1,0 +1,16 @@
+
+    <div class="row container m-a p-20 mt-10 mb-10">
+    {% for item in labels %}
+    {% for term in item.terms if term.parent == 123 or term.id == 123 %}
+        {# {% for term in item.terms if term.parent == 123 or term.id == 123 %} #}
+            
+            <div class="col-6 col-lg-2 mb10 m-a toile">
+                <img src=" {{ item.thumbnail.src }} " alt=" {{ item.thumbnail.alt }} " class="d-block w-100">
+                <div class="caption2 t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-30 m-a mt40 p-0"> {{ item.thumbnail.alt }} </div>
+            </div>
+           
+        {# {% endfor %} #}
+    {% endfor %}
+    {% endfor %}
+    </div>
+

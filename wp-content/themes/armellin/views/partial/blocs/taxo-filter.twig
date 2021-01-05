@@ -1,0 +1,9 @@
+<form id="list_taxo" class="d-block d-md-none m-a mb30" name="list_taxo" method="get">
+    <select class="col-6" name="taxo">
+    <option value="-1">Choisissez une catégorie</option>
+    {% for taxo in taxos %}
+            <option  data-filter=".{{ taxo.id }}" value="{{ loop.index }}">{{ taxo.name }}</option>
+    {% endfor %}
+    </select>
+    {# <input class="col-6" type="submit" name="envoi" value="filtrer"> #}
+</form>

@@ -1,0 +1,48 @@
+<section class="container m-a mb-10">
+    {% if post.get_field('references') or post.get_field('partenaires') or post.get_field('fournisseurs') %}
+    <h1 class="t-a-center t8 bold white bk7 p20 w-md-50 p-30">{{ 'remerciements'|upper }}</h1>
+    {% endif %}
+    {% if post.get_field('references') %}
+    <fieldset class="w-md-50 m-a brd1 brd-c4 mt-10">
+        <legend class="col-6 col-lg-3 t4 bold">au client</legend>
+        {% for item in post.get_field('references') %}
+        <div class="col-12 col-md-6 m-a">
+            <img src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}" class="d-block p-10 w-100">
+        </div>
+        {% endfor %}
+    </fieldset>
+    {% endif %}
+    <div class="row">
+    <div class="offset-md-1 d-none d-md-block"></div>
+    {% if post.get_field('prestataires') %}
+    <fieldset class="col-12 col-md-5 row brd1 brd-c4 mt-10 mb30 ">
+    <legend class="col-6 t4 bold ">à nos artisans partenaires</legend>
+        <div class="row">
+        {% for item in post.get_field('prestataires') %}
+            <div class="col-12 col-md-5 m-a">
+                <img src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}" class="d-block p-10 w-100">
+            </div>
+        {% endfor %}
+        </div>
+    </fieldset>
+    
+{% endif %}
+
+{% if post.get_field('fournisseurs') %}
+    <div class="offset-md-1 d-none d-md-block"></div>
+    <fieldset class="col-12 col-md-5 row brd1 brd-c4 mt-10 mb30">
+    <legend class="col-6 col-lg-3 t4 bold">à nos fournisseurs</legend>
+        <div class="row">
+        {% for item in post.get_field('fournisseurs') %}
+            <div class="col-12 col-md-4 m-a col-lg-4">
+                <img src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}" class="d-block p-10 w-100">
+            </div>
+        {% endfor %}
+        </div>
+    </fieldset>
+    
+{% endif %}
+    </div>
+   
+
+</section>

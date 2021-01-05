@@ -1,0 +1,37 @@
+<section>
+    <h2 class="p-10 font2 w-100 t-a-center mb20">
+        <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="w-30 w-md-10 p-20"> {{ post.get_field('titre_4') }}
+    </h2>
+    
+     <div class="row container m-a mb-10">
+    {% for item in events %}
+        {% if item.get_field('end') and item.get_field('end')|date('U') >= now|date('U') %}
+          <a href=" {{ item.link }} " class="resources-line p-10 toile col-12 bk5 row m-a brd1 brd-c2">
+                <div class="col-12 col-md-1">
+                    <img src=" {{ item.thumbnail.src }} " alt=" {{ item.thumbnail.alt }} " class="toile w-100 d-block">
+                </div>
+                <p class="col-12  t6 col-md-6 t-a-center pt20">
+                        {{ item.title }} -  <span class="yellow  op8"> {{ item.get_field('lieu').commune }} </span>
+                </p>
+                <p class="col-12 col-md-4 pt20 white">
+                {% if item.get_field('end') %}du  {% else %}le {% endif %}{{ item.get_field('begin')|date('j F Y') }} {% if item.get_field('end') %} au {{ item.get_field('end')|date('j F Y') }} {% endif %}
+                </p>
+            </a>
+        {% elseif item.get_field('end') == null and item.get_field('begin') != null and item.get_field('begin') >= now|date('U') %}
+            
+            <a href=" {{ item.link }} " class="resources-line p-10 toile col-12 bk5 row m-a brd1 brd-c2">
+                <div class="col-12 col-md-1">
+                    <img src=" {{ item.thumbnail.src }} " alt=" {{ item.thumbnail.alt }} " class="toile w-100 d-block">
+                </div>
+                <p class="col-12  t6 col-md-6 t-a-center pt20">
+                        {{ item.title }} -  <span class="yellow op8"> {{ item.get_field('lieu').commune }} </span>
+                </p>
+                <p class="col-12 col-md-4 pt20 white">
+                {% if item.get_field('end') %}du  {% else %}le {% endif %}{{ item.get_field('begin')|date('j F Y') }} {% if item.get_field('end') %} au {{ item.get_field('end')|date('j F Y') }} {% endif %}
+                </p>
+            </a>
+        {% endif %}
+    {% endfor %}
+    </div>
+</section>
+</section>
