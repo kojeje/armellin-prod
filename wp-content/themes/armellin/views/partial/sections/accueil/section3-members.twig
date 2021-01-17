@@ -1,0 +1,42 @@
+<section class="shadow parallax2 url4 p-10 white">
+   
+    
+    <a id="article-anch4" class="anch col-md-12 d-none d-md-block"></a>
+    <div class="row w-70 bk6 white mt10 m-a mb-20">
+        <div class="offset-md-3 d-none d-md-block"></div>
+        <h1 class="col-6 green font2 m-a t-a-center mt-10">
+            <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-10 "> L'équipe
+        </h1>
+        <div class="offset-md-3 d-none d-md-block"></div>
+            {% for item in members %}
+                <div class="col-12 col-md-6 p-10">
+                    <div class="m-a mb20">
+                        <div class="w-50 m-a">
+                            <img src=" {{ item.thumbnail.src }} " alt=" {{ item.thumbnail.alt }} " class="toile brd2 brd-c2 d-block r-50 w-100 m-a mb10">
+                        </div>
+                        <h2 class="green t-a-center">
+                            {{ item.get_field('prenom') }} {{ item.get_field('nom') }}  
+                        </h2>
+                        <p class="t-a-center">
+                            {% for term in item.terms %}
+                                {{ term.name }}
+                                {% if loop.last == false %}, {% endif %}
+                                        
+                            
+                            {% endfor %} 
+                        </p>
+                        {% for term in item.terms %}
+                        
+                            
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        <a href="#article-contact" class="button button-h t-a-center d-lg-block d-none color3 anch m-a col-12">
+
+            <span class="white"><i class="fas fa-chevron-down"></i></span>
+
+        </a>
+    </div>
+    
+</section>

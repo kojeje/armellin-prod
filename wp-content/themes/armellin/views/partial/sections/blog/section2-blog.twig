@@ -1,6 +1,6 @@
 <section>
     <h2 class="p-10 font2 w-100 t-a-center mb20">
-            <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="w-30 w-md-10 p-20"> {{ post.get_field('titre_2') }}
+             {{ post.get_field('titre_2') }}
     </h2>
     <div class="row">
     {# <h2 class="col-12 t-a-center t7"><span class="white bk7 p-10 d-block w-30 mb30 ">La ressource</span></h2> #}
@@ -12,8 +12,8 @@
                                 <img src=" {{ item.thumbnail.src }} " alt=" {{ item.thumbnail.alt }} " class="toile w-100 d-block">
                             </div>
                             
-                            <p class="caption3 bk6 green t-a-center">
-                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-30  p-20  mt40">
+                             <p class="caption3 bk6 t6 w-80 green t-a-center">
+                                <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-30 p-20">
                                 <br>
                                  {{ item.title }}
                             </p>

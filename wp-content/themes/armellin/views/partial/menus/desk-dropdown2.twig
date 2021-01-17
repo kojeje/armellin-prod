@@ -7,7 +7,7 @@
             {% for item in menu.items %}
          
             <li class="wmax-12 m-a d-block item-menu link pb30 ">
-                <a class="color3 " href="{% include 'partial/special/condition-link.twig' %}">
+                <a class="color3 " href="{{ item.link }}">
                 {# si lien  #}
                            
                          <i class="t6 {{ item.logo }}"></i> {{ item.title }}
@@ -27,15 +27,7 @@
             </li>
             
             {% endfor %}
-            <li class="wmax-12 m-a d-block item-menu link pb30 ">
-                <a class="color3 " href="#article-contact ">
-                {# si lien  #}
-                           
-                         <i class="t6 {{ item.logo }}"></i> {{ 'contact'|capitalize }}
-                    
-                </a>
-                
-            </li>
+            
            
            
         </ul>

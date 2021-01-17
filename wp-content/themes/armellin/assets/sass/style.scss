@@ -59,7 +59,7 @@ h6{
     font-size: $t1;
 }
 p, div, legend, input, select, ul, li, table{
-    font-size: $t0;
+    font-size: $t3;
 }
 input[type=submit]{
   color: white !important;
@@ -209,7 +209,7 @@ ul,
 
 }
 
-.toile img,
+
 .shadow{
   -webkit-box-shadow: 10px 5px 5px $color5 !important;
   -moz-box-shadow: 10px 5px 5px $color5 !important;

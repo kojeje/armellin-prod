@@ -3,14 +3,14 @@
     {% if post.get_field('slider-boolean') == true %}
     <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a>
     {% endif %}
-    <div class="col-12 col-md-4 mt-20">
+    <div class="col-12 col-md-6 mt-20">
         {% include 'partial/blocs/mesmerize-signature-big.twig' %}
         <img src="{{ post.thumbnail.src }}" alt="{{post.thumbnail.alt}}" class="w-100 shadow">
     </div>
-    <div class="col-12 col-md-8 p-20">
+    <div class="col-12 col-md-6 p-20">
         
         <h1 class="p-10 font2">
-            <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="w-10 p-20  mt40"> {{ post.title }}
+            <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="w-10"> {{ post.title }}
         </h1>
         <div class="t-md-6 t-lg-6 font3 color4 w-60 m-a p-10 pt-10">
             {{ post.get_field('presentation') }}
@@ -19,7 +19,7 @@
         
         <div class="col-1 m-a">
             
-            <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="d-block w-70 m-a mb30">
+            <img src="{{ theme.link }}/assets/img/frondaison-black.png" alt="" class="d-block w-100 m-a mb30">
         </div>
         {% include 'partial/anchors/anchor2.twig' %}
     </div>
