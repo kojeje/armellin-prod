@@ -4,28 +4,31 @@ table{
 }
 // ---------------- border -------------------------------
 .brd-c1{
-  border-color: $color1;
+  border-color: $color1 !important;
 }
 .brd-c2{
-  border-color: $color2;
+  border-color: $color2 !important;
 }
 .brd-c3{
-  border-color: $color3;
+  border-color: $color3 !important;
 }
 .brd-c4{
-  border-color: $color4;
+  border-color: $color4 !important;
 }
 .brd-c5{
-  border-color: $color5;
+  border-color: $color5 !important;
 }
 .brd-c6{
-  border-color: $color6;
+  border-color: $color6 !important;
 }
 .brd-c7{
-  border-color: $color7;
+  border-color: $color7 !important;
 }
 .brd-c8{
-  border-color: $color8;
+  border-color: $color8 !important;
+}
+.brd-green{
+    border-color: greenyellow !important;
 }
 
 // ------------------border solid -----------------------------

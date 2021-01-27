@@ -10433,3 +10433,7 @@ Stack trace:
 [03-Jan-2021 18:50:28 UTC] PHP Notice:  Undefined index: form_placement_fixed_bar_enabled in /var/www/clients/client1/web3/web/wp-content/plugins/mailpoet/lib/Config/Populator.php on line 759
 [03-Jan-2021 18:50:28 UTC] PHP Notice:  Undefined index: form_placement_bellow_posts_enabled in /var/www/clients/client1/web3/web/wp-content/plugins/mailpoet/lib/Config/Populator.php on line 771
 [03-Jan-2021 18:50:28 UTC] PHP Notice:  Undefined index: form_placement_slide_in_enabled in /var/www/clients/client1/web3/web/wp-content/plugins/mailpoet/lib/Config/Populator.php on line 781
+[19-Jan-2021 20:24:18 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /var/www/clients/client1/web2/web/wp-content/themes/armellin/functions.php on line 442
+[20-Jan-2021 20:42:06 UTC] PHP Warning:  Use of undefined constant lieux - assumed 'lieux' (this will throw an Error in a future version of PHP) in /var/www/clients/client1/web2/web/wp-content/themes/armellin/page-121.php on line 82
+[20-Jan-2021 20:42:43 UTC] PHP Notice:  Undefined variable: lieux in /var/www/clients/client1/web2/web/wp-content/themes/armellin/page-121.php on line 82
+[20-Jan-2021 20:47:59 UTC] PHP Parse error:  syntax error, unexpected 'Timber' (T_STRING) in /var/www/clients/client1/web2/web/wp-content/themes/armellin/template-realisation.php on line 44

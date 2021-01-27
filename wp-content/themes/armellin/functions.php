@@ -430,12 +430,12 @@ function my_custom_init()
         )
     );
     
-    
+}
     register_taxonomy_for_object_type('theme', 'post');
     register_taxonomy_for_object_type('event-type', 'events');
     register_taxonomy_for_object_type('type', 'acts');
     register_taxonomy_for_object_type('material', 'acts');
-    register_taxonomy_for_object_type('designer', 'acts');}
+    register_taxonomy_for_object_type('designer', 'acts');
     register_taxonomy_for_object_type('partner-type', 'partners');
     register_taxonomy_for_object_type('member-type', 'members');
     
@@ -510,3 +510,8 @@ function my_adjust_image_sizes()
 }
 add_action('init', 'init_remove_support', 100);
 
+function seopress_theme_slug_setup()
+{
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'seopress_theme_slug_setup');
