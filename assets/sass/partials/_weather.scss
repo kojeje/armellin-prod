@@ -1,0 +1,56 @@
+.widget-left,
+.weather-left-card__means,
+.weather-left-card__wind{
+    background-color: transparent !important;
+    color: white !important;
+}
+.widget-left-menu--compact,
+.widget-left--compact,
+.widget-left-menu__header{
+    width: 100% !important;
+    height: auto !important;
+    
+}
+.widget-left-menu,
+.widget-left-menu--brown{
+    background-color: $color3 !important;
+    background-image: none !important;
+    
+.widget-left-menu__header{
+    color: $color4 !important;
+    font-family: 'Roboto', serif !important;
+    font-weight: 100 !important;
+    font-size: 20px !important;
+}
+}
+.weather-left-card__img{
+    display: block !important;
+    width: 50% !important;
+    margin: auto !important;
+}
+#widget_b43119e924e2ae39134b942cf8d33cbf{
+    width: 100% !important;
+}
+#widget_b43119e924e2ae39134b942cf8d33cbf iframe,
+#widget,
+.masque{
+    display: block !important;
+//    width: 100% !important;
+    margin: auto !important;
+}
+.ephemeride-parent{
+//    background: none repeat scroll 0 0 #FFF; 
+    border: none !important;
+    box-shadow: 0 0 0 1px #DCBEA0;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative; 
+    width: 50% !important;
+    margin: auto !important;
+    padding: 0;
+    min-height: 250px !important;
+    margin-bottom: 40px !important;
+}
+.ephemeride-parent2{
+    width: 100% !important;
+}

@@ -1,0 +1,17 @@
+.post-overlay{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: -200vh !important;
+    bottom: 0 !important;
+    overflow-y: hidden;
+//    display: none !important;
+    transition:1s;
+    z-index: 901;
+    color: white !important;
+    padding: 20px;
+    cursor:pointer;
+    opacity: 0;
+    margin: 0 !important;
+    font-size: 14px !important;
+
+}

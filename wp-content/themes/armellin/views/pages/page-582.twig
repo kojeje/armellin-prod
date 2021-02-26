@@ -1,0 +1,29 @@
+{% extends 'base2.twig' %}
+{% block tmp_slide %}
+     {% include 'partial/blocs/slider.twig' %}
+{% endblock %}
+{% block content %}
+<article class="container-fluid parallax2 url6 pb-10" id="post-{{ post.id }} ">
+     <h1 class="col-12 col-md-4 p-20 mb20 bk6 green font2 m-a t-a-center">
+        <img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="w-5 mb10 p-0"> {{ post.title }}
+     </h1>
+     <section>
+     {% include 'partial/blocs/taxo-isotope.twig' %}
+     {% include 'partial/blocs/smart-taxo-isotope.twig' %}
+     {% include 'partial/blocs/taxo-filter.twig' %}
+     {% if acts %}
+     <div class="row grid mb-10 justify-content-center mb-20">
+     {% for item in acts %}
+   <a href=" {{ item.link }} " class="{% if item.terms %}{% for term in item.terms  %}{{ term.id }} {% endfor %}{% endif %}element-item col-12 col-md-6 col-lg-4 p-0 carousel-item2">
+               <img src="{{ item.thumbnail.src }}" alt=" {{ item.thumbnail.alt }} " class="w-100 p-0">
+               <div class="post-overlay t-a-center green bk7 p-10"><img src="{{ theme.link }}/assets/img/frondaison-white.png" alt="" class="d-block w-20 m-a mt10 mb20 p-0">
+                {{ item.title }}
+              </div>
+          </a>
+     {% endfor %}
+     </div>
+     {% endif %}
+     {# {% include 'partial/blocs/taxo-isotope.twig' %} #}
+    </section>
+</article>
+{% endblock %}
